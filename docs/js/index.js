@@ -26,6 +26,7 @@ var paddle, ball, bounce;
 
 function preload ()
 {
+    this.load.setBaseURL('/phaser-test/');
     this.load.image('sky', '/img/bg.png');
     this.load.image('ball', '/img/ball.png');
     this.load.image('paddle', '/img/paddle.png');
