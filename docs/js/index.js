@@ -48,7 +48,7 @@ class PlayScene extends Phaser.Scene {
         // blocks
 
         // paddle
-        this.paddle = this.physics.add.staticImage(200, 750, 'paddle');
+        this.paddle = this.physics.add.staticImage(200, 650, 'paddle');
         this.input.on('pointermove', this.movePaddle.bind(this));
      }
 
@@ -75,7 +75,7 @@ var config = {
         parent: 'phaser',
         autoCenter: Phaser.Scale.CENTER_BOTH,
         width: 400,
-        height: 700
+        height: 800
     },
     physics: {
         default: 'arcade',
