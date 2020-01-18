@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx live-server --host=0.0.0.0 ./docs"
+    "dev": "npx live-server --host=0.0.0.0 --mount=/phaser-test/:./docs --open=/phaser-test/"
   },
   "author": "",
   "license": "ISC",
