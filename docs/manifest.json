@@ -1,0 +1,8 @@
+{
+    "name": "Phaser-Test",
+    "short_name": "Test",
+    "lang": "de-DE",
+    "start_url": "https://lqdchrm.github.io/phaser-test/",
+    "display": "fullscreen",
+    "theme_color": "#000000"
+}
