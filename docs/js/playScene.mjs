@@ -1,4 +1,4 @@
-class PlayScene extends Phaser.Scene {
+export default class PlayScene extends Phaser.Scene {
 
     constructor(config) {
         super(config);
@@ -57,7 +57,7 @@ class PlayScene extends Phaser.Scene {
         }
 
         // paddle
-        this.paddle = this.physics.add.staticImage(200, 650, 'paddle');
+        this.paddle = this.physics.add.staticImage(200, 750, 'paddle');
         this.input.on('pointermove', this.movePaddle.bind(this));
      }
 
@@ -83,24 +83,3 @@ class PlayScene extends Phaser.Scene {
         b.emitter.stop();
     }
 }
-
-var config = {
-    type: Phaser.AUTO,
-    scale: {
-        mode: Phaser.Scale.FIT,
-        parent: 'phaser',
-        autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 400,
-        height: 800
-    },
-    physics: {
-        default: 'arcade',
-        arcade: {
-            // gravity: { y: 200 },
-            debug: false
-        }
-    }
-};
-
-var game = new Phaser.Game(config);
-game.scene.add('PlayScene', PlayScene, true);

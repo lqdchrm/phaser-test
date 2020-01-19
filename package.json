@@ -4,14 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "npx live-server --host=0.0.0.0 --mount=/phaser-test/:./docs --open=/phaser-test/"
+    "postinstall": "npx shx cp ./node_modules/phaser/dist/phaser-arcade-physics.min.js ./docs/lib/phaser-arcade-physics.min.js",
+    "dev": "npx live-server --host=0.0.0.0 --mount=/phaser-test/:./docs --no-browser"
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "phaser": "^3.21.0"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "live-server": "^1.2.1"
+    "phaser": "^3.21.0",
+    "live-server": "^1.2.1",
+    "shelljs": "^0.8.3"
   }
 }
