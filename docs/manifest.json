@@ -4,6 +4,7 @@
     "lang": "de-DE",
     "start_url": "https://lqdchrm.github.io/phaser-test/",
     "display": "fullscreen",
-    "theme_color": "#000000",
-    "orientation": "landscape"
+    "orientation": "landscape",
+    "background_color": "#000000",
+    "theme_color": "#000088"
 }
