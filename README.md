@@ -1,5 +1,10 @@
 # Demo project
 
+This is a small sample project with [Phaser 3](https://phaser.io).
+All source is in `./docs`, so that Github can directly host everything.
+
+Live: [https://lqdchrm.github.io/phaser-test/](https://lqdchrm.github.io/phaser-test/).
+
 ## Prerequisites
 
 * install [node.js](https://nodejs.org/en/download/)
@@ -16,10 +21,6 @@
 ### Basics
 
 #### Scenes
-
-* Create
-* Activate
-* Manage
 
 #### Scene-Graph
 
