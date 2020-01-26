@@ -1,3 +1,4 @@
+import TitleScene from './titleScene.mjs'
 import PlayScene from './playScene.mjs'
 
 var config = {
@@ -13,10 +14,11 @@ var config = {
         default: 'arcade',
         arcade: {
             // gravity: { y: 200 },
-            debug: false
+            debug: true
         }
     }
 };
 
 var game = new Phaser.Game(config);
-game.scene.add('PlayScene', PlayScene, true);
+game.scene.add('TitleScene', TitleScene, true);
+game.scene.add('PlayScene', PlayScene, false);
