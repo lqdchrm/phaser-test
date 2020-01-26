@@ -1,24 +1,25 @@
+import BackgroundScene from './backgroundScene.mjs';
 import TitleScene from './titleScene.mjs'
+import HudScene from './hudScene.mjs'
 import PlayScene from './playScene.mjs'
 
 var config = {
     type: Phaser.AUTO,
     scale: {
-        mode: Phaser.Scale.FIT,
         parent: 'phaser',
+        mode: Phaser.Scale.FIT,
         autoCenter: Phaser.Scale.CENTER_BOTH,
-        width: 400,
-        height: 800
+        width: 800,
+        height: 400
     },
     physics: {
         default: 'arcade',
-        arcade: {
-            // gravity: { y: 200 },
-            debug: true
-        }
+        arcade: { debug: false }
     }
 };
 
 var game = new Phaser.Game(config);
+game.scene.add('BackgroundScene', BackgroundScene, true);
 game.scene.add('TitleScene', TitleScene, true);
 game.scene.add('PlayScene', PlayScene, false);
+game.scene.add('HudScene', HudScene, true);

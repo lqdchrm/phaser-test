@@ -11,7 +11,6 @@ export default class PlayScene extends Phaser.Scene {
 
     preload() {
         this.load.setBaseURL('/phaser-test/');
-        this.load.image('sky', '/img/bg.png');
         this.load.image('ball', '/img/ball.png');
         this.load.image('block', '/img/block.png');
         this.load.image('paddle', '/img/paddle.png');
@@ -20,9 +19,6 @@ export default class PlayScene extends Phaser.Scene {
     }
     
     create() {
-        // background
-        this.add.image(200, 400, 'sky');
-
         // sound
         this.bounce = this.sound.add('bounce');
 
@@ -35,6 +31,7 @@ export default class PlayScene extends Phaser.Scene {
             blendMode: 'ADD'
         });
         this.ball = this.physics.add.image(200, 300, 'ball');
+        this.ball.scale = 0.5;
         this.ball.setVelocity(97, 201);
         this.ball.setBounce(1, 1);
         this.ball.setCollideWorldBounds(true);
@@ -44,20 +41,21 @@ export default class PlayScene extends Phaser.Scene {
 
         // blocks
         this.blocks = this.physics.add.staticGroup();
-        for (var i = 0; i < 6; ++i) {
+        for (var i = 0; i < 18; ++i) {
             emitter = particles.createEmitter({
                 speed: 20,
-                scale: { start: 0.7, end: 0 },
+                scale: { start: 0.5, end: 0 },
                 tint: { start: 0xff945e, end: 0xff945e },
                 blendMode: 'ADD'
             });
-            var block = this.blocks.create(34 + i * 66, 200, 'block');
+            var block = this.blocks.create(100 + i * 33, 100, 'block');
             block.emitter = emitter;
             emitter.startFollow(block);
         }
 
         // paddle
-        this.paddle = this.physics.add.staticImage(200, 750, 'paddle');
+        this.paddle = this.physics.add.staticImage(200, 350, 'paddle');
+        this.paddle.setDisplaySize(64, 16);
         this.input.on('pointermove', this.movePaddle.bind(this));
      }
 
