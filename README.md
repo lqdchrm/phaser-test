@@ -9,6 +9,7 @@ Live: [https://lqdchrm.github.io/phaser-test/](https://lqdchrm.github.io/phaser-
 
 * install [node.js](https://nodejs.org/en/download/)
 * install [VSCode](https://code.visualstudio.com/Download)
+  - install [Debugger for Firefox](https://marketplace.visualstudio.com/items?itemName=firefox-devtools.vscode-firefox-debug) extension
 
 ## How to build and debug in VS Code
 
